@@ -1,6 +1,6 @@
 COMP2042 Coursework
 
-1. GitHub Repository:
+1. GitHub Repository:https://github.com/doubleshy/CW2024/tree/master
 
 2. Run the Project
 In the src folder, find the Main class under the com.example.demo.controller package.
