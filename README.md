@@ -64,7 +64,7 @@ Added initializeMainMenu() method to initialize the main menu scene and set the 
 Added startLevelOne() method for a button to start Level One and set the stage's scene to Level One.
 
 TransitionScreen.java
-use TransitionScreen()来添加了一个关卡之间的缓冲，使关卡之间的衔接更加流畅。
+use TransitionScreen()Use TransitionScreen() to add a buffer between levels to make the connection between levels smoother.
 
 Boss.java
 Custom Shield
@@ -132,3 +132,42 @@ Purpose:
 To provide a robust and reusable foundation for all levels in the game.
 To centralize and modularize key functionalities like actor management, game state updates, and UI integration.
 To improve scalability and ease of adding new levels by abstracting level-specific behaviors into child classes.
+
+HeartDisplay.java
+Changes Made:
+Dynamic Heart Container Creation:
+Added a method to initialize a for heart icons with specific x and y coordinates.HBox
+Ensures that the health display is positioned correctly in the game scene.
+Heart Icon Management:
+Dynamically populates the container with heart icons based on the player's total health.
+Uses a method to generate an for each heart, ensuring consistent sizing and aspect ratio.ImageView
+Health Update Logic:
+Introduced a method to visually remove a heart from the container when the player takes damage.
+Ensures that the display accurately reflects the player’s current health in real-time.
+Error Handling for Missing Resources:
+Added error handling to log missing image resources and gracefully skip the heart addition.
+Reusable Heart Display:
+Encapsulated the logic for heart display in a , making it modular and easy to integrate across different levels.HBox
+Purpose:
+Provides a dynamic and visually appealing representation of the player's health.
+It ensures the health display is modular, responsive, and accurate, contributing to the game's user interface with clear feedback on the player’s status.
+
+7.Modified Java Classes:
+UserPlane	      
+ Enhanced with spreadshot capabilities, bounded movement.	
+Controller	
+ Refactored to use reflection for dynamic level transitions, simplifying level management.	
+Main	
+ Simplified initialization with clearer separation of concerns for menu setup and application start.
+LevelOne
+ Enhanced with spawn probabilities and a kill target for progression.	
+LevelTwo	
+ Added boss-specific spawning logic with shield and health bar integrations.
+LevelParent	
+ Introduced modular game state updates, countdown overlays, and improved enemy management logic.
+ShieldImage	
+ Added dynamic visibility controls and size configuration for representing temporary invulnerability effects.
+HeartDisplay	
+ Updated to dynamically add or remove heart icons, visually reflecting the player’s current health.
+Boss	
+ Added shield mechanics with cooldown, a health bar overlay, and randomized movement patterns.
